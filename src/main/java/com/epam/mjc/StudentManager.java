@@ -13,7 +13,6 @@ public class StudentManager {
             throw new StudentNotFoundException(
                     "Could not find student with ID " + studentID);
         }
-
     }
 
     public static void main(String[] args) {
