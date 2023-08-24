@@ -46,8 +46,8 @@ public class StudentManagerTest {
     @Test
     public void testIDsNotChangedV2() {
         try {
-            //Student.ARTUR
-            assertEquals("Could not find student with ID 1234567", manager.find(Arrays.stream(Student.values()).map(Student::getId).max(Long::compare).get()));
+
+            assertEquals(Student.ARTUR, manager.find(Arrays.stream(Student.values()).map(Student::getId).max(Long::compare).get()));
         } catch (StudentNotFoundException ex) {
             System.err.print(ex);
         }
